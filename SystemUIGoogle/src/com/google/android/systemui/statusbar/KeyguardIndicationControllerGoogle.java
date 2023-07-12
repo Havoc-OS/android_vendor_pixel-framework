@@ -166,7 +166,7 @@ public class KeyguardIndicationControllerGoogle extends KeyguardIndicationContro
     public String computePowerIndication() {
         if (mIsCharging && mAdaptiveChargingEnabledInSettings && mAdaptiveChargingActive) {
             String formatTimeToFull = mAdaptiveChargingManager.formatTimeToFull(mEstimatedChargeCompletion);
-            return mContext.getResources().getString(R.string.adaptive_charging_time_estimate, NumberFormat.getPercentInstance().format(mBatteryLevel / 100.0f), formatTimeToFull);
+            return mContext.getResources().getString(R.string.adaptive_charging_time_estimate, NumberFormat.getPercentInstance().format(mBatteryLevel / 100.0f), formatTimeToFull) + getBatteryInfo();
         }
         return super.computePowerIndication();
     }
