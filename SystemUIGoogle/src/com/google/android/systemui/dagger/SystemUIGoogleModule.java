@@ -39,6 +39,7 @@ import com.android.systemui.dock.DockManager;
 import com.android.systemui.dock.DockManagerImpl;
 import com.android.systemui.doze.DozeHost;
 import com.android.systemui.dump.DumpManager;
+import com.android.systemui.lineage.LineageModule;
 import com.android.systemui.media.dagger.MediaModule;
 import com.android.systemui.navigationbar.gestural.GestureModule;
 import com.android.systemui.plugins.BcSmartspaceDataPlugin;
@@ -79,7 +80,6 @@ import com.android.systemui.statusbar.policy.SensorPrivacyController;
 import com.android.systemui.statusbar.policy.SensorPrivacyControllerImpl;
 import com.android.systemui.volume.dagger.VolumeModule;
 import com.android.systemui.rotationlock.RotationLockModule;
-import com.android.systemui.statusbar.policy.AospPolicyModule;
 
 import com.google.android.systemui.NotificationLockscreenUserManagerGoogle;
 import com.google.android.systemui.assist.AssistManagerGoogle;
@@ -128,7 +128,8 @@ import dagger.Lazy;
         ColumbusModule.class,
         StatusBarEventsModule.class,
         SystemUIGooglePolicyModule.class,
-        RotationLockModule.class
+        RotationLockModule.class,
+        LineageModule.class
 })
 public abstract class SystemUIGoogleModule {
 

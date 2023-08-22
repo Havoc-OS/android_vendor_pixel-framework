@@ -59,9 +59,9 @@ public class ThemeOverlayControllerGoogle extends ThemeOverlayController {
                                         SystemSettings systemSettings, SystemPropertiesHelper systemPropertiesHelper,
                                         ConfigurationController configurationController) {
         super(context, broadcastDispatcher, bgHandler, mainExecutor, bgExecutor,
-                themeOverlayApplier, secureSettings, wallpaperManager, userManager,
-                deviceProvisionedController, userTracker, dumpManager, featureFlags,
-                resources, wakefulnessLifecycle, systemSettings);
+                themeOverlayApplier, secureSettings, systemSettings, wallpaperManager, userManager,
+                configurationController, deviceProvisionedController, userTracker, dumpManager,
+                featureFlags, resources, wakefulnessLifecycle);
         this.systemProperties = systemPropertiesHelper;
         this.resources = resources;
         configurationController.addCallback(new ConfigurationController.ConfigurationListener() {
